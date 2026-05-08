@@ -5,9 +5,10 @@ import { ArrowRight, UserCircle, Users, Activity } from "lucide-react";
 
 interface ServicesProps {
   services: Array<{ t: string; d: string }>;
+  tenantId: string;
 }
 
-export function ServicesSection({ services }: ServicesProps) {
+export function ServicesSection({ services, tenantId }: ServicesProps) {
   const icons = [
     <UserCircle className="w-8 h-8" key="1" />,
     <Users className="w-8 h-8" key="2" />,
@@ -23,7 +24,7 @@ export function ServicesSection({ services }: ServicesProps) {
             <h2 className="text-secondary-foreground font-heading text-3xl md:text-5xl font-semibold">Come posso aiutarti</h2>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <SmartLink href="/servizi" className="group inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">Scopri tutti i servizi<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></SmartLink>
+            <SmartLink href={`/${tenantId}/servizi`} className="group inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">Scopri tutti i servizi<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></SmartLink>
           </motion.div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

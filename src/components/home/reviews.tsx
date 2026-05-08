@@ -23,9 +23,9 @@ export function ReviewsSection({ reviews }: ReviewsProps) {
           <Quote className="absolute top-6 left-6 md:top-10 md:left-10 w-16 h-16 md:w-24 md:h-24 text-primary/5 -rotate-12" />
 
           <div className="flex-1 relative z-10 w-full mt-10 md:mt-0">
-            <div className="min-h-[220px] md:min-h-[200px] flex flex-col justify-center">
+            <motion.div layout className="flex flex-col justify-center">
               <AnimatePresence mode="wait">
-                <motion.div key={index} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.3 }}>
+                <motion.div key={index} layout initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.4, ease: "easeInOut" }} className="bg-card p-8 md:p-10 rounded-3xl shadow-sm border border-border/50">
                   <h3 className="text-xl md:text-3xl lg:text-4xl font-heading font-medium text-foreground leading-relaxed md:leading-relaxed mb-8 break-words">
                     "{reviews[index].text}"
                   </h3>
@@ -41,13 +41,13 @@ export function ReviewsSection({ reviews }: ReviewsProps) {
                   </div>
                 </motion.div>
               </AnimatePresence>
-            </div>
+            </motion.div>
             
-            <div className="flex gap-4 mt-10">
-              <button onClick={prevReview} className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-secondary hover:text-primary transition-colors focus:outline-none">
+            <div className="flex gap-4 mt-8 justify-end md:justify-start">
+              <button onClick={prevReview} className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-secondary hover:text-primary hover:scale-110 active:scale-95 transition-all cursor-pointer shadow-sm focus:outline-none">
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <button onClick={nextReview} className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center text-background hover:bg-primary hover:text-primary-foreground transition-colors shadow-xl focus:outline-none">
+              <button onClick={nextReview} className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center text-background hover:bg-primary hover:text-primary-foreground hover:scale-110 active:scale-95 transition-all cursor-pointer shadow-xl focus:outline-none">
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>

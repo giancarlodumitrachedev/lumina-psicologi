@@ -27,9 +27,10 @@ export default async function HomePage(props: Props) {
         title={content.hero.title}
         sub={content.hero.sub}
         img={content.hero.img}
+        tenantId={id}
       />
       <IssuesGrid issues={content.issues} />
-      <ServicesSection services={content.services} />
+      <ServicesSection services={content.services} tenantId={id} />
       <ReviewsSection reviews={content.reviews} />
       <FaqSection faqs={content.faqs} />
     </div>
