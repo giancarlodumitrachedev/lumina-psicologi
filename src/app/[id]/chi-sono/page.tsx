@@ -29,8 +29,8 @@ export default async function ChiSonoPage(props: Props) {
         <div className="flex flex-col md:flex-row gap-12 items-start mt-12 md:mt-16">
           <div className="w-full md:w-1/3 relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shrink-0">
             <Image
-              src={\`/Assets/\${content.hero.img}\`}
-              alt={\`Ritratto di \${name}\`}
+              src={`/Assets/${content.hero.img}`}
+              alt={`Ritratto di ${name}`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 33vw"
@@ -55,7 +55,7 @@ export default async function ChiSonoPage(props: Props) {
             )}
             
             <SmartLink
-              href={\`/\${id}/contatti\`}
+              href={`/${id}/contatti`}
               className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-md text-lg font-medium transition-all shadow-md mt-4 no-underline"
             >
               Prenota un primo colloquio

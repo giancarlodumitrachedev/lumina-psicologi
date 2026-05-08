@@ -44,7 +44,7 @@ export default async function ContattiPage(props: Props) {
                   </div>
                   <div>
                     <p className="font-medium text-secondary-foreground">Email</p>
-                    <a href={\`mailto:\${contact_info.email}\`} className="text-primary hover:underline">
+                    <a href={`mailto:${contact_info.email}`} className="text-primary hover:underline">
                       {contact_info.email}
                     </a>
                   </div>
@@ -56,7 +56,7 @@ export default async function ContattiPage(props: Props) {
                   </div>
                   <div>
                     <p className="font-medium text-secondary-foreground">Telefono</p>
-                    <a href={\`tel:\${contact_info.phone.replace(/\\s/g, '')}\`} className="text-primary hover:underline">
+                    <a href={`tel:${contact_info.phone.replace(/\\s/g, '')}`} className="text-primary hover:underline">
                       {contact_info.phone}
                     </a>
                   </div>

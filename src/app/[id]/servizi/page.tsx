@@ -51,7 +51,7 @@ export default async function ServiziPage(props: Props) {
             Ogni situazione è unica. Durante il primo colloquio analizzeremo insieme le tue necessità per individuare l'approccio più adatto a te.
           </p>
           <SmartLink
-            href={\`/\${id}/contatti\`}
+            href={`/${id}/contatti`}
             className="inline-flex items-center bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-md text-lg font-medium transition-all shadow-md"
           >
             Contattami per parlarne

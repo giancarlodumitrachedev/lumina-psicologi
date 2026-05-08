@@ -25,7 +25,7 @@ export function FaqSection({ faqs }: FaqProps) {
               <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: idx * 0.1 }} className="border border-border/60 rounded-2xl overflow-hidden bg-card">
                 <button onClick={() => setOpenIndex(isOpen ? null : idx)} className="w-full flex items-center justify-between p-6 text-left hover:bg-secondary/5 transition-colors">
                   <span className="font-semibold text-lg text-secondary-foreground pr-8">{f.q}</span>
-                  <ChevronDown className={\`w-5 h-5 text-primary shrink-0 transition-transform duration-300 \${isOpen ? "rotate-180" : ""}\`} />
+                  <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>
                   {isOpen && (

@@ -38,7 +38,7 @@ export function HeroSection({ tag, title, sub, img }: HeroProps) {
             <motion.div initial={{ opacity: 0, x: -50, y: 50 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="absolute -bottom-6 left-2 sm:-left-6 md:-left-12 lg:-left-20 bg-card p-4 rounded-2xl shadow-xl border border-border/50 flex flex-col gap-3 w-56 sm:w-64 z-20">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full overflow-hidden relative bg-muted shrink-0">
-                  <Image src={\`/Assets/\${img}\`} alt="Professionista" fill className="object-cover" />
+                  <Image src={`/Assets/${img}`} alt="Professionista" fill className="object-cover" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">Seduta in corso</p>

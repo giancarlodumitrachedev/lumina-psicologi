@@ -75,7 +75,7 @@ function getMockTenantData(id: string): TenantData | null {
     name: id.replace("-", " ").toUpperCase(),
     title: isFisio ? "Fisioterapista" : "Psicoterapeuta",
     contact_info: {
-      email: \`info@\${id}.it\`,
+      email: `info@${id}.it`,
       phone: "+39 123 4567890",
       address: "Via Roma 1",
       city: "Torino"
