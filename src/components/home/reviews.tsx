@@ -19,14 +19,14 @@ export function ReviewsSection({ reviews }: ReviewsProps) {
   return (
     <section className="py-16 md:py-24 bg-background overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-[#FDF8F5] rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative">
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-secondary/10 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative">
           <Quote className="absolute top-6 left-6 md:top-10 md:left-10 w-16 h-16 md:w-24 md:h-24 text-primary/5 -rotate-12" />
 
           <div className="flex-1 relative z-10 w-full mt-10 md:mt-0">
             <motion.div layout className="flex flex-col justify-center">
               <AnimatePresence mode="wait">
-                <motion.div key={index} layout initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.4, ease: "easeInOut" }} className="bg-card p-8 md:p-10 rounded-3xl shadow-sm border border-border/50">
-                  <h3 className="text-xl md:text-3xl lg:text-4xl font-heading font-medium text-foreground leading-relaxed md:leading-relaxed mb-8 break-words">
+                <motion.div key={index} layout initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.4, ease: "easeInOut" }} className="bg-card p-8 md:p-12 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-border/40 min-h-[300px] flex flex-col justify-between">
+                  <h3 className="text-xl md:text-2xl font-heading font-medium text-foreground/90 italic leading-relaxed md:leading-relaxed mb-8 break-words">
                     "{reviews[index].text}"
                   </h3>
                   
